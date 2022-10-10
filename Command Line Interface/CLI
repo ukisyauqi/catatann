@@ -1,0 +1,7 @@
+Mengganti direktory				$ cd Desktop
+Kembali dari direktori			$ cd ..	
+Print directory					$ pwd
+Print isi directory				$ dir 					$ ls				
+Membuat folder					$ mkdir new-folder
+Membuat file					$ touch new-file.txt
+

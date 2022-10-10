@@ -1,0 +1,47 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    padding: 5px;
+    border: black solid 5px;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+header {
+    background: purple;
+    padding: 50px 0;
+}
+
+aside {
+    background: blue;
+    padding: 30px 0;
+}
+
+nav {
+    background: red;
+    padding: 30px 0;
+}
+
+main {
+    background: chocolate;
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background: grey;
+    padding: 30px 0;
+}
+
+.content {
+    display: flex;
+}
+
+.sidebar {
+    flex: 1;
+}

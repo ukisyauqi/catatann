@@ -1,0 +1,44 @@
+
+Membuat local repo
+	Buat folder
+	klik kanan git bash here
+	kemudian git init
+
+Modif repo dan commit
+	Modifikasi
+	git add .					//semua file masuk ke staging area
+	git commit -m "message"		//save file saat ini
+
+Membuat cabang
+	git branch nama-branch
+
+Melihat cabang saat ini
+	git branch
+
+Melihat grafik seluruh cabang dan commit
+	alias graph="git log --all --decorate --oneline --graph"
+	ketik graph
+
+turn back time
+	git checkout commit-7-digit
+
+ganti cabang
+	git checkout nama-branch
+
+gabungkan cabang
+	git merge nama-cabang		//kalo conflict solve di editor, save
+
+print status repo
+	git status
+
+clone repo dari cloud (github atau gitlab)
+	git clone <link https>
+
+Push ke remote
+	git push (mirip commit tapi nyimpen commit di remote)
+
+Pull dari remote (ambil repo cloud yg sudah di clone)
+	git pull (mirip checkout tapi dari commit master yang ada di remote)
+
+
+

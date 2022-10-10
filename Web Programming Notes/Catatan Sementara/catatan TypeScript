@@ -1,0 +1,20 @@
+instalasi typscript:
+	cmd: npm install -g typescript
+	run di vs code error: cannot be loaded because running scripts is disabled on this system
+	powershell (run admin): Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+	run di vs code sekarang bisa
+
+	cmd: npm install -g ts-node
+	kalo coba ts-node gagal terus
+	cmd: npm install @types/node
+	ts-node success
+
+inisialisasi variable:
+	let a: number = 2
+	let b: string = "oke"
+	let c = 3 //ini juga ga bakal error
+
+inisialisasi array:
+	let a: number[] = [1,2,3]
+	let b: Array<number> = [1,2,3]
+	let c: [number, number, string] = [1,2,"3"]  //ini tuple (array dengan type berbeda)

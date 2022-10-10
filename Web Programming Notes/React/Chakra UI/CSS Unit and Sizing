@@ -1,0 +1,45 @@
+Using Right CSS for sizing:
+- fontSize: rem
+- width: % (add maxWidth rem)
+- height: dont use height, use padding first, if really need: use min-heigth (rem)
+- padding/margin: rem or use em if you want scaling with the text inside (use em in button)
+- image:
+	- bgImage:
+	 	bgSize: cover (no empty space), contain ()
+JUST USE REM EVERYWHERE!!
+
+
+Chakra	rem	    Pixel	
+0.5	    0.125  	2		   ---
+1	      0.25	  4			 |
+1.5	    0.375	  6			 |
+2	      0.5		  8			 |> +0.5
+2.5	    0.625	  10		 |
+3	      0.75	  12		 |
+3.5	    0.875	  14		 |
+4	      1		    16	 	 ---
+5	      1.25	  20		 |
+6	      1.5		  24	   |
+7	      1.75	  28		 |> +1
+8	      2		    32		 |
+9	      2.25	  36		 |
+10	    2.5		  40	   ---
+12	    3		    48		 |> +2
+14	    3.5		  56		 |
+16	    4		    64		 ---
+20	    5		    80		 |
+24	    6		    96		 |
+28	    7		    112		 |
+32	    8		    128		 |
+36	    9		    144		 |> +4
+40	    10		  160		 |
+44	    11		  176		 |
+48	    12		  192		 |
+56	    14		  224		 |
+60	    15		  240		 |
+64	    16		  256		 ---
+72	    18		  288			 
+80	    20		  320			 
+96	    24		  384   		 
+
+JIKA NILAI NOT INCLUDE IN THAT LIST maka itu adalah nilai pixel	

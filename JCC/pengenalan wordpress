@@ -1,0 +1,57 @@
+WordPress adalah sebuah CMS
+
+CMS atau content management system adalah perangkat lunak (Software)yang berfungsi untuk mengatur konten pada website dengan tujuan agar lebih mudah dalam pengelolaan website.
+
+contoh2 CMS:
+	CMS WordPress
+	CMS Joomla
+	CMS Drupal
+	Aura CMS
+	CMS Opencart
+	CMS Prestashop
+	CMS Moodle
+	Magento
+
+2 elemen penting yaitu:
+	Aplikasi managemen konten (Content Management Application) berfungsi sebagai ujung tombak dari CMS (Desain antarmuka)
+	Aplikasi pengiriman konten (Content Delivery Application) adalah sebagai backend dari sebuah website
+
+CMS juga dapat digunakan untuk:
+	Website pribadi atau blog.
+	Website E-Commerce atau toko online.
+	Website bisnis, perusahaan, komunitas atau organisasi.
+	Website Portal.
+	Website Galeri Foto.
+
+kelebihan WordPress:
+	Gratis
+	Banyak Variasi Plugin
+	Ribuan Tema untuk Kustomisasi
+	Instalasi dan Pembaruan mudah dilakukan
+	Multifungsi
+	Fleksible
+	Aman
+	Mudah dipelajari
+
+Web Server adalah sebuah software yang berfungsi untuk menerima dan melayani permintaan yang dikirimkan user melalui browser kemudian ditampilkan kepada user sesuai dengan permintaan yang dikirimkan ke server
+
+gampangnya web server adalah server untuk aktivitas request response web
+
+beberapa web server:
+	IIS
+	AMPPS
+	XAMPP
+	WAMPSERVER
+	NGINX
+
+XAMPP berfungsi sebagai server yang berdiri sendiri (localhost), yang terdiri beberapa program antara lain : Apache HTTP Server, MySQL database, dan penerjemah bahasa yang ditulis dengan bahasa pemrograman PHP dan Perl. 
+
+arti huruf XAMPP:
+	X = multi platform
+	A = Apache HTTP Server
+	M = MySQL database
+	P = PHP
+	P = Perl
+
+XAMPP ini berfungsi sebagai wadah atau tempat untuk membangun sebuah website di laptop atau komputer temen2 sebelum website itu di publish ke hosting.
+

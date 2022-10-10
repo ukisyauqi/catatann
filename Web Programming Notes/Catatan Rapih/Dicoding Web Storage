@@ -1,0 +1,25 @@
+Web Storage = tempat menampung data, di refresh tidak hilang, max size: 10 MB, bentuk data primitf: number, boolean, string
+
+Sebelum pakai check dulu support tidak
+    if (typeof(Storage) !== "undefined") {
+        // Browser mendukung sessionStorage/localStorage.
+    } else {
+        // Browser tidak mendukung sessionStorage/LocalStorage
+    }
+
+Tipe Web Storage:
+    sessionStorage = sementara, hilang jika tab di close
+    localStorage   = lama, tidak hilang walaupun tab/browser di close
+
+sessionStorage
+    simpan data: sessionStorage.setItem(key, value)
+    ambil data:  sessionStorage.getItem(key)           //return value
+    hapus data:  sessionStorage.removeItem()
+    cek data:    sessionStorage.getItem(key) === "undefined"
+
+localStorage
+    simpan data: localStorage.setItem(key, value)
+    ambil data:  localStorage.getItem(key)   //return value
+    hapus data:  localStorage.removeItem()
+    cek data:    localStorage.getItem(key) === "undefined"
+

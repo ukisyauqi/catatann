@@ -1,0 +1,41 @@
+>> Kelas Entity
+
+@Entity
+class User (
+    @PrimaryKey
+    var uid: Long, 
+    @ColumnInfo(name = "first_name")
+    var firstName: String,
+    @ColumnInfo(name = "last_name")
+    var lastName: String
+)
+
+ini penamaan header tabel
+PrimaryKey kyk nomor, atau id, bisa auto generate biar increment
+
+
+>> Data Acces Object
+
+@Dao
+interface UserDao {
+    @Query("SELECT * FROM user") 							//select all from user
+    val getAll: List<User>
+ 
+    @Query("SELECT * FROM user WHERE uid IN (:userIds)")
+    fun loadAllByIds(userIds: IntArray): List<User>
+ 
+    @Query("SELECT * FROM user WHERE first_name LIKE :first AND " +
+            "last_name LIKE :last LIMIT 1")
+    fun findByName(first: String, last: String): User
+ 
+    @Insert
+    fun insertAll(vararg users: User)
+ 
+    @Delete
+    fun delete(user: User)
+}
+
+Dao nyediain fungsi CRUD si db
+
+
+

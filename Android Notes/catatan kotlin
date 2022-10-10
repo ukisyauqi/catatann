@@ -1,0 +1,44 @@
+Array
+	val mixArray 	 = arrayOf("ini string", 'c', 1)
+	val intArray 	 = intArrayOf(1, 2, 3)
+	val charArray 	 = stringArrayOf('1', '2', 'a')
+	val booleanArray = booleanArrayOf(true, false)
+		
+	val anehNih = Array(3, {i -> i+i}) // out: [0,2,4]  // i = [0, 1, 2]  out = [ 0+0 , 1+1 , 2+2 ] 
+
+Nullable, Safe Call, Elvis Operator
+	val text: String  = null // error
+	val text: String? = null // ok
+
+	val text = null 		 // ok
+
+	print(text?.length)		 // out: null
+
+	print(text?.length ?: 7) // out: 7
+
+
+String Template
+	val hour = 18
+	print("toko ${ if (hour < 15) "buka" else "tutup" }")
+
+
+Raw String
+	val a = """ 
+		line 1
+		line 2
+		line 3
+	""".trimIndent()   // biar tabnya ilang
+
+
+Array vs List vs mutable List
+	val a = arrayOf(1, 2, 3)
+		a[0] = 6 // OK
+		a.add(4) // error
+
+	val l = listOf(1, 2, 3)
+		l[0] = 6 // error
+		l.add(4) // error
+
+	val m = mutableListOf(1, 2, 3)
+		m[0] = 6 // OK
+		m.add(4) // OK

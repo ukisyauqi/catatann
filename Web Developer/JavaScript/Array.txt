@@ -1,0 +1,52 @@
+Akses
+	a = b[3]			
+	a = b.slice(2)		// 2 -- last
+	a = b.slice(2,5)    // 2 -- 4
+	a = b.slice(-2)		// 2 items terakhir
+
+
+Add and Remove
+	a.push(2)			// add kanan
+	a.unshift(2)		// add kiri
+	a.pop()				// hapus kanan
+	a.shift()			// hapus kiri
+
+	a = b.concat(c,d)	   // gabung array b,c,d
+	a = [...b, ...c, ...d] // gabung array b,c,d
+
+	a = ['a','b','c','d','e']
+	a.splice(3,2) 				// di 3 (d), hapus 3 item (d,e)
+	a.splice(2,0, 'hi', 'hi')	// di 2, add 'hi','hi'
+
+
+Merubah Jenis Data
+	a = [1,2,3]
+	a = a.join("")		        // [1,2,3] ->  "123"
+	a = parseInt(a)		        //  "123"  ->   123
+	a = a.toString()	        //   123   ->  "123"
+	a = a.split("")		        //  "123"  ->  ['1','2','3']
+	a = a.map(n => parseInt(n)) // ['1','2','3'] -> [1,2,3]
+
+
+Mencari member
+	a = [4,3,2,1,1,2,3,4]
+	b = a.indexOf(1)	// 1 ada di i3 
+	b = a.includes(1)	// true, 1 ada di array tsb 
+
+	a = [4,3,2,1,1,2,3,4]
+	b = a.some((n) => n > 3)      //true   beberapa n > 3 ?
+	b = a.every((n) => n > 3)     //false  semua n > 3 ?
+	b = a.find((n) => n > 3)      //4      cari nilai yang > 3 
+	b = a.filter((n) => n > 3)    //[4,4]  cari semua nilai yang > 3
+	b = a.findIndex((n) => n > 3) //0      index si nilai yang > 3
+
+
+Modifikasi urutan
+	a = ['a','aa','ab']
+
+	a = a.reverse() 	// putar, 	['ab','aa','a']
+	a = a.sort()		// urutkan, ['a','aa','ab']
+
+	a = a.sort((n, m) => n - m) // naik  [1,5,10]
+	b = a.sort((n, m) => m - n) // turun [10,5,1]
+

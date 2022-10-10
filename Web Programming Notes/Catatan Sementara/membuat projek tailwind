@@ -1,0 +1,20 @@
+membuat projek tailwind
+	terminal vs code: npm init 
+		untuk inisialisasi projek dan membuat package.json
+	npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+		install tailwind css di projek, nambah folder node module
+	Masukan ini di style.css unutuk meng include library tailwind
+		@tailwind base;
+		@tailwind components;
+		@tailwind utilities;
+	tambah ini di package.json di scripts (sebelum "test")
+		"build.css": "tailwindcss -i src/style.css -o dist/style.css",
+			-i = input
+			-o = output
+			dist = distribution
+	npm run build.css
+		bakal execute yang atas tadi, fungsinya bikin banyak style yang bakal dipake di html pake class
+	buat index.html di folder dist, 
+	jangan lupa tambah ini 
+		<link rel="stylesheet" href="style.css">
+	selamat coding

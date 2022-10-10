@@ -1,0 +1,113 @@
+Add & Remove & Get
+    Array
+        masuk kanan             : a.push(x)
+        masuk kiri              : a.unshift(x)
+        masuk di i              : a.splice(i, 0, x)
+        hapus kanan             : a.pop()
+        hapus kiri              : a.shift()
+        hapus di i              : a.splice(i, 1)
+        get   di i              : a[i]
+        get   i - j             : a.slice(i, j+1)
+        get   i - last          : a.slice(i)
+        gabung a b c            : a.concat(b,c)
+                                  [...a, ...b, ...c]
+        update i                : a[i] = x
+
+    String
+        masuk kanan             : a + x
+        masuk kiri              : x + a
+        masuk di i              : a.slice(0, i) + x + a.slice(i, a.length)
+        hapus di i              : a.slice(0, i) + a.slice(i+1, a.length)
+        get   di i              : a[i]
+        String literal          : `hello ${myVar}`
+
+    Object
+        deklarasi                     : let obj = { a: 1, b: 2, c: 3 }
+        masuk kanan                   : obj.d = 4
+        update b                      : obj.b = 20
+                                        obj = { ...obj, b: 20 }         // pake di useState setState
+
+
+Convert Array String Number
+    Array -> String   : a = a.join("")                  String -> Number  : a = parseInt(a)
+    Array <- String   : a = a.split("")                 String <- Number  : a = a.toString()
+    
+Convert JSON, string
+    JSON -> String  : string = JSON.stringify(object)
+    JSON <- String  : object = JSON.parse(string)
+
+Excel         
+    reverse                           : x = a.reverse()
+    sort ascending (naik)             : x = a.sort((n, m) => n - m)
+    sort descending (turun)           : x = a.sort((n, m) => m - n)
+    min                               : x = Math.min(...a)
+    max                               : x = Math.max(...a)
+    sum                               : x = a.reduce((n,m) => n + m, 0)
+    average                           : x = (sum / times.length) || 0
+
+
+Mencari elemen Array yang sesuai
+                                           a = [1,2,3,4,3,2,1]
+    index si "2"                         : a.indexOf(2)                out: 1  (first match)
+    apakah ada "2"                       : a.includes(2)               out: true
+    apakah semua > 2                     : a.every((n) => n > 2)       out: false
+    apakah ada yang > 2                  : a.some((n) => n > 2)        out: true
+    sebutkan elemen yang > 2             : a.find((n) => n > 2)        out: 3  (first match)
+    sebutkan index elemen tsb yang > 2   : a.findIndex((n) => n > 2)   out: 2  (first match)
+    sebutkan semua elemen yang > 2       : a.filter((n)) => n > 2)     out: [3,4,3]
+
+
+text-transform
+                    a = " HALLO GUYS DAVID DISINI ";
+    capitalize    : capitalize(a);         " Hallo guys david disini "         function capitalice() { return this.charAt(0).toUpperCase() + this.slice(1).toLowerCase();};
+    title         : capitalizeEachWord(a); " Hallo Guys David Disini "         function capitalizeEachWord() { var arr = this.split(" "); var res = []; for (i of arr) { res.push(i.charAt(0).toUpperCase() + i.slice(1).toLowerCase());} return res.join(" "); };
+    lowercase     : a.toLowerCase();       " hallo guys david disini "
+    uppercase     : a.toUpperCase();       " HALLO GUYS DAVID DISINI "
+    
+
+Math
+    pembulatan                    a = 1,23
+        kebawah                 : Math.floor(a)              out:  1
+        keatas                  : Math.ceil(a)               out:  2
+        terdekat                : Math.round(a)              out:  1   
+        1 angka dibelakang koma : a.toFixed(1)               out:  "1,2"
+
+    random min sampai max       : getRandomInteger(min,max)  function getRandomInteger(min, max) { return Math.floor(Math.random() * (max - min + 1) ) + min;}                          
+    
+JS DOM
+    Finding HTML element
+        element = document.querySelector("<css-selector>")           mendapatkan elemen pertama yang cocok
+        element = document.querySelectorAll("<css-selector>")        mendapatkan semua elemen yang cocok, (dalam array)
+
+    Changing HTML element
+        element.innerHTML = <html-content>
+        element.<HTML-attribute> = <attribute-value>
+        element.style.<property> = <property-value>
+        element.setAtribute(<attribute>,<value>)
+
+    Adding and Deleteing Elements
+        document.createElement(<HTML-element>)
+        document.removeChild(<HTML-element>)
+        document.appendChild(<HTML-element>)
+        document.replaceChild(<HTML-element>)
+        document.write(text)
+
+JS Web Storage          //semua data storage adalah string
+    sessionStorage
+        simpan          : sessionStorage.setItem(key, value)
+        ambil           : sessionStorage.getItem(key)               
+        hapus           : sessionStorage.removeItem()
+        cek             : sessionStorage.getItem(key) === "undefined"
+
+    localStorage    
+        simpan          : localStorage.setItem(key, value)
+        ambil           : localStorage.getItem(key)                 
+        hapus           : localStorage.removeItem()
+        cek             : localStorage.getItem(key) === "undefined"
+
+    
+    
+
+
+
+    

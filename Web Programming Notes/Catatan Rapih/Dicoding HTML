@@ -1,0 +1,180 @@
+>> Pengenalan Web
+
+Tim Berners-Lee seorang ilmuwan Inggris menemukan World Wide Web (WWW) pada tahun 1989
+
+Server 		= software yang dapat menghubungkan sebuah komputer dengan komputer lain
+HTTP 		= HyperText Transfer Protocol, protokol-protokol untuk mendukung transfer data antar komputer
+HTTP server = software yang menerima transaksi HTTP
+
+IP Address 	= kyk nomor rumah bagi pengguna internet (tapi bisa berubah-ubah); 	IP = Internet Protocol
+DNS			= nama pengganti dari IP address;									DNS = Domain Name System
+
+Client		= perangkat yang request ke server, co browser
+
+Server-side	= proses yang dilakukan pada sisi server
+Client-side	= proses yang dilakukan pada sisi client
+
+HTML 		= Markup language untuk membuat struktur dan kontent web CSS			= Bahasa
+untuk mengatur dan mempercantik tampilan web JavaScript	= Bahasa pemrograman
+untuk menampilkan informasi secara dinamis.
+
+
+>> HTML
+
+Elemen <html> = elemen root untuk inform ini html file
+
+Elemen <head> = tempat disimpannya informasi dari dokumen HTML (HTML5 bisa dihilangkan)
+terdiri dari
+	<title> 	= Judul, (muncul di tab)
+	<style>		= Tempat CSS
+	<base>		=
+	<link>		=
+	<meta>		=
+	<script>	=
+	<noscript>	=
+
+Elemen <body> = Pengisi konten di halaman website
+
+
+>> Pendalaman HTML
+
+Atribut HTML 	= informasi tambahan elemen, disimpan di open tag 				co: <p lang="id">
+
+Global Atribut	= semua elemen punya
+Spesific Atrib 	= beberapa elemen saja yang punya
+
+Global Atribut
+	accesskey       = tombol shortcut untuk mengaktifkan/memfokuskan pada sebuah elemen.
+	class			= memberi satu atau lebih classname untuk sebuah elemen.
+	contenteditable = konten elemen bisa diedit atau tidak
+	data-*			= digunakan untuk menyimpan sebuah data pribadi khusus ke halaman atau aplikasi.
+	dir				= arah teks untuk konten pada suatu elemen.
+	draggable		= apakah suatu elemen dapat di drag atau tidak.
+	dropzone		= data yg di drag apakah data yang disalin, dipindahkan, atau ditautkan saat dijatuhkan.
+	hidden			= apakah suatu elemen ditampilkan atau tidak pada browser.
+	id				= menetapkan id pada elemen.
+	lang			= bahasa pada konten elemen.
+	spellcheck		= apakah elemen harus diperiksa ejaannya dan tata bahasanya atau tidak.
+	style			= menerapkan inline CSS
+	tabindex		= urutan dari suatu elemen.
+	title			= informasi tambahan tentang suatu elemen.
+	translate		= apakah konten elemen harus diterjemahkan atau tidak.
+
+Paragraf = <p>
+Heading	 = <h1> sampai <h6>, size besar, bold, elemen yg dicari google search
+
+List:
+	Unordered lists   = tdk berurutan, bullet 
+	Ordered lists 	  = berurutan, angka
+	Description lists = terms diikuti deskripsi, kyk glosarium
+
+Unordered lists
+	<ul>											
+	   <li>Item 1</li>								- Item 1
+	   <li>Item 2</li>								- Item 2
+	</ul>
+
+Ordered lists
+	<ol type="A" start=3 reversed>				
+	   <li>Item 1</li>								C. Item 1
+	   <li>Item 2</li>								B. Item 2
+	</ol>
+
+Description lists
+	<dl>											
+      <dt>Term</dt>									Term
+      <dd>Description</dd>								Description
+    </dl>
+
+Gambar/Image
+	<img src="gambar.jpg" alt="dicoding" title="logo dicoding" width="100px">
+
+	src: 	url gambar
+	alt: 	alternative kalo gambar tdk dimuat
+	title: 	kalo hover ada tulisan tsb
+	width:	lebar
+	height: tinggi (set salah satu aja agar gambar sesuai ratio)
+
+Jenis Format Gambar yg Support
+.gif							= gambar bergerak
+.jpg .jpeg .jfif .pjpeg .pjpeg	= gambar biasa
+.png 							= best quality, large size, bisa transparan
+.webp							= mirip jpg, size lebih kecil
+.svg							= gambar vector, size kecil
+
+Long quotations   = <blockquote>, untuk kutipan/quote/testimonial
+Preformatted text = <pre>, sesuai dengan apa yang ditulis (ngga usah pake <br> untuk garis baru)
+Figure			  = <figure> mepresentasikan konten tersendiri, misal gambar dengan caption
+
+Inline Formatting Text = elemen yang tidak menyebabkan ganti baris baru
+Block Formattion Text  = elemen yang menyebabkan ganti garis baru
+
+Anchor (jangkar) = HyperLink, <a href="https://example.com">Website</a>
+	Atribut:
+		download		untuk mengunduh file dari URL 
+		href  			untuk pindah ke URL
+		hreflang		Menetapkan bahasa dari dokumen target
+		ping			Mengirimkan POST Request ke beberapa URL
+		referrerpolicy	Menetapkan kebijakan referensi untuk dikirim pada target
+		rel 			Menetapkan hubungan antara halaman yang ditampilkan dengan target
+		target			Buka di tab baru, window, atau tab itu sendiri
+		media			Menetapkan tipe media yang digunakan pada target
+
+	href isinya id elemen untuk scroll ke elemen tsb 
+
+Emphasized text  = <em>, cukup penting, miring
+Important text 	 = <strong>, sangat penting, bold
+Short quotations = <q>, kutipan pendek, dalam tanda petik dua ("")
+
+Citation		 = <cite>, biasa buat link, miring
+Defining terms 	 = <dfn>, buat istilah, miring
+
+Superscript		 = <sup>, pangkat
+Subscript		 = <sub>, huruf kecil dibawah
+
+Highlighted		 = <mark>, di stabilo
+
+Line Break   	 = <br>, new line
+
+Semantic Elemen:
+	<header> = kepala
+	<main>	 = badan
+	<footer> = kaki
+
+Navigation  	  = <nav>, untuk navigasi
+Article    		  = <article>, wadah artikel
+Aside (kesamping) = <aside>, pinggirnya elemen 
+Section (bagian)  = <section>, bagian di artikel
+
+Generic Elemen:
+	<div> pembungkus umum, sifatnya blok
+	<span> pembungkus umum, sifatnya inline
+
+
+Tabel
+<table border="1">											 	 Table
+   <tr>							    
+       <th>Baris 1 kolom 1</th>			       	    1,1           1,2           1,3               <!-- <th>		     -->
+       <th>Baris 1 kolom 2</th>				    	2,1 	 	  2,2           2,3	              <!-- stylenya      -->
+       <th>Baris 1 kolom 3</th>					    3,1 	      3,2           3,3	              <!-- bold & center -->
+   </tr>
+   <tr>
+       <td>Baris 2 kolom 1</td>								         <table>
+       <td>Baris 2 kolom 2</td>
+       <td>Baris 2 kolom 3</td>				<tr>  |  <th>...<th>   <th>...<th>   <th>...<th>  |  <tr>
+   </tr>									<tr>  |  <td>...<td>   <td>...<td>   <td>...<td>  |  <tr>
+   <tr>										<tr>  |  <td>...<td>   <td>...<td>   <td>...<td>  |  <tr>
+       <td>Baris 3 kolom 1</td>			
+       <td>Baris 3 kolom 2</td>
+       <td>Baris 3 kolom 3</td>
+    </tr>
+</table>
+
+Merge and Center 
+	Column span = <td colspan="2">...</td>
+	Row span	= <td rowspan="3">...</td>
+
+Escaped Character
+	https://www.w3schools.com/python/gloss_python_escape_characters.asp
+
+

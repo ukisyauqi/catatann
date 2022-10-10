@@ -1,0 +1,41 @@
+Fungsi Version Control System (git & GitHub)
+	1. rekaman/snapshot, history
+	2. kolaborasi
+	3. mengetahui kapan dan siapa yang merubah code
+	4. kembali ke masa lalu, (checkout)
+
+Git
+	merupakan VCS untuk mengelola perubahan file di dalam folder (repository/repo)
+	repository: folder yang dikelola
+	commit: rekaman/snapshot saat ini
+	hash: ID commit
+	checkout: berpindah ke sebuah commit
+	branch: membuat cabang
+	merge: menggabungkan cabang
+
+Github
+	pengertian: git versi cloud-based
+	remote: sumber yang memiliki repo
+	clone: mengambil repo dari remote
+	push: upload commit
+	pull: download commit
+
+Branch
+	checkout: berpindah ke branch/commit yang lain
+	pull request: meminta pemilik repo untuk mengambil perubahan, request merge untuk branch
+	merge: menggabungkan 2 branch
+	merge conflict: 2 branch pull request namun ada perbedaan di suatu file, jadi harus milih baris code mana
+					yang mau diterapin di master
+	
+Fork
+	pengertian: membuat copy/duplikat repo orang lain (beserta history)
+
+Git
+	Git client: software (memiliki GUI) untuk menggunakan git
+	git bash: terminal khusus untuk git yang menerima perintah2 bash
+
+
+
+
+
+

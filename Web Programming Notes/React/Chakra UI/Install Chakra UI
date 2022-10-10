@@ -1,0 +1,19 @@
+create React App emtpy template:
+	npx create-react-app ./ --template empty
+
+install Chakra UI:
+	npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^5
+
+Create App.jsx:
+	rfc
+
+at index.js wrap App component with chakra provider
+	import { ChakraProvider } from '@chakra-ui/react'
+
+	<React.StrictMode>
+	    <ChakraProvider>
+	    	<App />
+	    </ChakraProvider>
+  	</React.StrictMode>
+
+  

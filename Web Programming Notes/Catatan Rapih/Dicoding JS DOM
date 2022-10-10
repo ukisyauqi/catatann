@@ -1,0 +1,107 @@
+Browser Object (window)
+    history     = Sebagai navigasi (go back atau go forward) histori URL browser.
+    location    = Mendapatkan URL yang terdapat pada address bar browser.
+    alert()     = Menampilkan dialog alert dengan pesan dan tombol “ok”.
+    close()     = Menutup tab yang aktif.
+    confirm()   = Menampilkan dialog dengan pesan dan tombol “ok” dan “cancel”. Method ini akan mengembalikan nilai boolean sesuai response dari pengguna.
+    prompt()    = Menampilkan dialog dengan pesan dan teks input. Method ini akan mengembalikan nilai string sesuai response dari pengguna.
+
+DOM (Document Object Model)
+    getElementById(“display”)        = Mengembalikan elemen yang memiliki nilai id “display”.
+    getElementsByName(“button”)      = Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute name dengan nilai “button”.
+    getElementsByClassName(“button”) = Mengembalikan banyak elemen (HTMLCollection) yang memiliki attribute class dengan nilai “button”.
+    getElementsByTagname(“div”)      = Mengembalikan banyak elemen (HTMLCollection) yang merupakan <div> elemen
+    querySelector(“.button”)         = Mengembalikan elemen pertama yang menerapkan class “button”.
+    querySelectorAll(“.button”)      = Mengembalikan banyak elemen (HTMLCollection) yang menerapkan class “button”.
+
+Manipulasi DOM
+    Attribute (attr HTML bukan CSS)
+        someElement.setAttribute("attributName", "attributeValue")
+        const value = someElement.getAttribute("attributeName")
+
+    Content (<p> ini content </p>)
+        someElement.innerHTML = '<em>some text</em>'   // HTML format
+        someElement.innerText = '<em>some text</em>'   // text apa adanya
+        
+    Menambah elemen
+        let newElement = document.createElement("p")   // variable newElement berisi elemen p baru
+        newElement.innerHTML = "text"                  // variable newElement sekarang punya content
+        document.body.appendChild(newElement)          // variable newElement masuk ke body (posisi akhir)
+        someElement.insertBefore(newElement, childElement) // newElement masuk ke someElement diletakan sebelum childElement
+
+    Akses child elements
+        const childElement = parentElement.childNodes[0]
+
+    Ubah style elements
+        someElement.style.textSize = "2em"
+
+    Event Listener
+        JS:                                                                     //https://developer.mozilla.org/en-US/docs/Web/Events
+            someElement.addEventListener('click', function(){
+                //code
+            });
+
+            // bisa juga:
+            function myFunction() {
+                //code
+            }
+            someElement.addEventListener('click', myFunction)
+
+            //bisa juga:
+            function welcome(){
+                    //code
+                }
+            document.body.onload = welcome;
+
+        HTML:                                                                   //https://www.w3schools.com/tags/ref_eventattributes.asp
+            <button onclick="myFunction()">click me</button>                    
+
+        Common HTML event
+            onchange      = Sebuah elemen HTML telah diubah
+            onclick       = Pengguna mengklik elemen HTML
+            onmouseover   = Pengguna menggerakkan mouse di atas elemen HTML
+            onmouseout    = Pengguna memindahkan mouse dari elemen HTML
+            onkeydown     = Pengguna menekan tombol keyboard
+            onload        = Browser telah selesai memuat halaman
+
+        Bubbling and Capturing
+            Bubbling = event handler dari child ke parent
+            Capturing = event handler dari parent ke child 
+
+                misal ada div>div>div semuaya menerapkan onclick, div ini saling bertumpuk
+                jika di klik maka urutan event handler yang dijalankan adalah dimulai dari
+                keturunan terakhir kemudian ke arah parent, ini namanya bubbling
+
+                Jika mau dari parent maka buat perulangan for untuk array element div 
+                kemudian terapkan onclick listener, ini namanya Capturing
+                ini terjadi karena item array akan berurut dari element paling atas (di baris code)
+
+    Form Event
+        onsubmit = Event ini akan terjadi ketika kita menekan tombol submit milik sebuah form
+        oninput  = Event ini akan terjadi jika kita memberikan input melalui field.
+        onchange = Event ini akan terjadi jika kita sudah selesai memberikan input melalui field. Bisa juga diaplikasikan ke elemen select (dropdown menu).
+        oncopy   = Event ini akan terjadi jika kita menyalin (copy) isi dari sebuah elemen.
+        onpaste  = Event ini akan terjadi jika kita menempel (paste) isi dari hasil salin (copy) pada sebuah teks.
+        onfocus  = Event ini akan terjadi jika sebuah elemen pada form dipilih untuk dilakukan proses input.
+        onblur   = Event ini akan terjadi jika sebuah elemen pada form tidak diplih lagi untuk dilakukan proses input.
+
+    Prevent Default
+        event.preventDefault() //cancel event, misal submit, yang harusnya store data dan refresh jadi gak jadi
+                                               misal link, yang harusnya pindah halaman, ini gak jadi
+
+    Window Event
+        DOMContentLoaded = trigger ketika HTML selesai load (tanpa css)
+
+    append vs appendChild
+        //misal
+        a = document.createElement("h1")
+        b = document.createElement("h2")
+        // a append b atau a appendChild b akan menghasilkan sama yaitu: <h1> <h2></h2> <h1>
+        // kalau a.append("test") menghasilkan <h1> <h2></h2> test <h1>
+        // kalau a.appenChild("test) menghasilkan error
+
+    
+
+
+
+    

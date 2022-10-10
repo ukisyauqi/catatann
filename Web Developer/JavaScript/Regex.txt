@@ -1,0 +1,14 @@
+
+	+	1 or more 	
+	?	0 or 1	
+	*	0 or more
+
+	.	all char kecuali newline
+	\w  all word
+	\W  not word
+	\s	spasi
+	\S  not white space
+
+	escaped karakter tidak berlaku pemakaian +?*
+	tapi pake {jml-char-yg-mau-dipilih}
+

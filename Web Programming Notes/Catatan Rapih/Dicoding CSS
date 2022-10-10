@@ -1,0 +1,70 @@
+Selector
+	Selector Basic
+		Type Selector	   = select element,			h1 {...}
+		Class Selector	   = select class, 				.nama_class {...}
+		ID Selector		   = select ID, 				#nama_ID {...}
+		Attribute Selector = select yg pake attribute 	[href] {...}      // kandugan kata: https://www.w3schools.com/css/css_attribute_selectors.asp 
+		Universal Selector = select all					* {...}
+
+Combinator
+	Adjacent Sibling (+) = img + p {...}  // select p persis setelah img
+	General Sibling  (~) = img ~ p {...}  // select all p setelah img	
+	Child			 (>) = div > p {...}  // select all p yg merupakan child div (anak pertama)
+	Descendant		 ( ) = div p   {...}  // select all p yg merupakan keturunan div 
+
+Pseudo Selector
+	PSEUDO ELEMENT 
+		p::first-line    {...} // baris pertama
+		p::first-letter  {...} // huruf pertama 
+		p::selection     {...} // huruf yang diblok
+		h1::before       {content:"*"} // sebelum h1 tambah "*" 
+		h1::after        {content:"*"} // sesudah h1 tambah "*" 
+
+	PSEUDO CLASS 
+		a:link           {...} // unvisited 
+		a:visited        {...} // visited 
+		a:hover          {...} // cursor di atas link 
+		a:active         {...} // cursor menekan link 
+		input:focus      {...} // contoh: lagi ngetik di form 
+
+		p:first-child    {...} // p yang merupakan anak pertama
+		p:nth-child(5)   {...} // p yang merupakan anak ke-lima 
+		p:first-of-type  {...} // p pertama dari serangakaian p 
+		p:nth-of-type(5) {...} // p ke 5 dari serangakain p 
+		p:only-of-type   {...} // select p yang merupakan anak tunggal  
+
+		:not(p)          {...} // select yang bukan p  
+
+Text dan Font
+	Shorthand
+		font: style variant weight size/line-height family;
+		font: italic normal bold 12px/30px Georgia, serif;
+		
+	Jenis Font
+		font-family: Courier, monospace;
+		
+	Alignment text
+		text-align: justify;    /* horizontal alignment text */
+		vertical-align: middle; /* vertikal   alignment text (didalam line height atau cell tabel bukan container) */
+
+		color: red;               	/* text color */
+		text-transform: capitalize; /* text case type */
+		text-decoration: underline; /* text decoration */
+		font-size: 2.5rem;          /* text size */
+		font-style: italic;         /* text style */
+		font-weight: bold;          /* text weight */
+		font-variant: small-caps;   /* all uppercase with big first letter */
+
+		text-indent: 1rem;     /* width of indentation */
+		letter-spacing: 2px;   /* width of each letter */
+		word-spacing: 2px;     /* width of each word */
+		line-height: 2px;      /* height of each line */
+
+		white-space: nowrap;   /* never move to new line */
+		word-wrap: break-word; /* long word dipotong kebawah jika tdk cukup, */
+		word-break: break-all; /* prihal new line, break-all word dipotong dimana saja; keep-all word gak dipotong */
+
+		writing-mode: vertical-lr; /* tulisan vertical https://www.w3schools.com/css/tryit.asp?filename=trycss3_writing-mode */
+
+		/* using own font => https://www.w3schools.com/css/css3_fonts.asp */
+	}

@@ -1,0 +1,11 @@
+Akses
+	a[2]
+	a.charAt(2)		// sama
+	a.slice(2)		// dari i=2 sampai terakhir
+	a.slice(2,5)	// dari i=2 sampai i=4
+	a.slice(-3)		// dari ke tiga terakhir
+	a.substr(2,5)	// dari i=2 ambil 5 char
+
+
+
+

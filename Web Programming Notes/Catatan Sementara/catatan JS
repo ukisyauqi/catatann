@@ -1,0 +1,155 @@
+Sejarah JavaScript
+    1995 oleh Brendan Eich
+    awalna "Mocha", berubah jadi "Live Script", kemudian distandarisasi oleh 
+    European Computer Manufacturers Association (ECMA), dikenal menjadi ECMAScript
+
+Expression dan Statement.
+    Expression adalah unit kode yang dapat dievaluasi menjadi suatu nilai. co: 2 + 3, a > b,
+    Statement adalah instruksi untuk melakukan sebuah aksi tertentu. co: perulangan, if else, dll
+
+Declaration
+    adalah deklarasi awal suatu variabel co: let x
+Assignment
+    adalah memasukkan nilai ke variable  co: x = 2
+Initialization
+    adalah deklarasi + assignment        co: let x = 2
+
+Variable
+    var   = terlalu flexible, global scope, bisa hoisting (pake variabel dulu baru deklarasi), bisa redeclare (deklarasi 2x atau lebih)  
+    let   = mutable (bisa re assignment)
+    const = immutable (tdk bisa re assignment)
+    tanpa keyword = global, error kalo strict mode, ...
+
+Rule penamaan variable
+    Dimulai dengan huruf atau underscore
+    Dapat terdiri dari huruf, angka, dan underscore (_) dengan berbagai kombinasi.
+    Tidak boleh mengandung spasi (whitespace). Jika penamaan variabel lebih dari dua kata, tuliskan secara camelCase. Contoh firstName, lastName, catName, dll.
+    Tidak boleh mengandung karakter spesial (! . , / \ + * = dll.)
+
+Tipe Data
+    Undefined (belum di assignment)
+    Number  : 3, 3.234, 3e-2
+    BigInt  : 1234567890123456789012345678901234567890n (tdk ada decimal, tambah "n": diakhir, kalo diprint bakal ditampil semua, nggak kyk 1.2345678901234568e+39)
+    Boolean : true, false
+    String  : "hello", 'world'
+    Null    : nilai kosong, tipe objek, biasa buat inisialisasi
+    Symbol  : identifier unik, biasa dipakai di objek, ...
+        const id = Symbol("id") // out: Symbol(id)
+
+Operator
+    Math
+        +  -  /  *  %  **  ++  --
+            %  : 5 % 2 = 1 (hasil bagi)
+            ** : 5**2  = 25 (pangkat)
+            console.log(5++) // 5
+            console.log(++5) // 6
+
+    String
+        x = 5 + 5   // 10 (Numbers)
+        x = "5" + 5 // "55" (String)
+        x = 5 + "5" // "55" (String)
+        
+        x = "answer = ${5 + 5}" // out: answer = ${5 + 5}
+        x = `answer = ${5 + 5}` // out: answer = 10        // back-tick (``)
+
+        console.log("%s is %d.", "answer =", 10); // out: answer = 10
+
+
+
+    Comparison
+        ==  ===  !=  !==  >  <  >=  <=  ?
+            ("5" == 5)  // true
+            ("5" === 5) // false
+
+    Logical
+        &&  ||  !
+            (true || false) // true
+            (true && false) // false
+            !(true)         // false
+
+    Bitwise
+        https://www.w3schools.com/js/js_operators.asp
+        
+    Ternary Operator
+        dari ini:   if (true) a = 1; else a = 2 
+        jadi ini:   a = (true) ? 1 : 2
+
+    truthy dan falsy
+        nilai yang dianggap true atau false
+            falsy:   0   0n   ""   ''   null   undefined   NaN
+            truthy: selain falsy
+
+Switch Case
+    dari ini:
+        if (x === "a") { //code }
+        else if (x === "b") { //code }
+        else { //code}
+
+    jadi ini:
+        switch (x) {
+            case "a":
+                //code
+                break;
+            case "b":
+                //code
+                break;
+            default:
+                //code
+        }
+
+    break untuk keluar dari switch Case
+    default untuk kalo case tdk ada yg cocok
+
+While dan do-While
+    while (true) { 
+        // ketika true code ini akan terus jalan
+    }
+
+    do { 
+        // jalankan code ini kemudian check jika true maka akan jalan lagi dst
+    } while (true)
+
+
+Object
+    Contoh Syntax
+        const obj = {
+            key1: 1,
+            key2: " value2",
+            "key3": " value3",
+
+            method: function(){
+                return this.key1 + this.key2 + this["key3"]    // "1 value2 value3"
+            }
+        };
+
+    Akses objek
+        a = obj.key1 + obj.key2 + obj["key3"]                  // "1 value2 value3"
+
+    Add new property
+        obj.key4 = "value4"
+        obj["key5"] = "value5"
+
+Expression Function
+    const sum = function(x,y) {
+        return x * y
+    }
+
+    let hasil = sum(5,2) // 10
+
+BOM, Browser Object Model
+    alert()  = box pop up diatas menampilkan pesan, web akan diam sampai user tekan objek
+    prompt() = box pop up untuk mengisi form, return null jika cancle, return "" jika tdk diisik
+
+    Console
+        log()   = pesan ke console
+        info()  = pesan penting ke console
+        warn()  = pesan peringatan ke console
+        error() = pesan berisi error ke console
+
+DOM, Document Objek Model
+    select child element
+        const childElement = parentElement.childNodes[0]; // 0 berarti anak pertama
+
+
+
+

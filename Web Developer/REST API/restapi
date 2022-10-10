@@ -1,0 +1,30 @@
+install axios:
+	terminal: 	npm install axios
+	JS: 		import axios from 'axios'
+
+proses komunikasi data ini merupakan promise
+kalo gamau nunggu loading data maka pakai async await
+kalo async await ngurus error nya pake try/catch: 
+
+const fetchData = async () => {
+	try { 
+		const result = await axios.get(...) 
+		setDataPeserta(result.data)
+	} catch(err) { 
+		console.log(err) 
+	}
+	
+}
+	
+
+kalo mau nunggu loading maka ngurus errornya pakai then/catch
+
+const fetchData = () => {
+	axios.get(...)
+		.then((result) => setDataPeserta(result.data))
+		.catch((err) => console.log(err.message))
+}
+
+
+Get data
+	const result = axios.get('url') //result berisi array 

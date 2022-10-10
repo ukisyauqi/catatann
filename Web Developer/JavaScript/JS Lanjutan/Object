@@ -1,0 +1,5 @@
+Membuat objek A dengan inherit dari objek B
+	let B = {nama: "uki"}			// buat objek B
+	let A = Object.create(B)		// buat objek A inherit dari B
+	A.umur = 21						// tambah properti umur dengan value 21
+									// maka A = {nama: "uki", umur: 21}

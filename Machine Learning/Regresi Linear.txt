@@ -1,0 +1,50 @@
+ML terdiri dari 3 jenis:
+- Reinforced learning
+- Supervised learning
+- Unsupervised learning
+
+Reinforced learning: mesin melakukan trial and error mencari reward terbanyak
+Supervised learning: mesin belajar data berlabel, ketika ada data baru mesin bisa menjawab labelnya 
+Unsupervised learning: mesin belajar banyak sekali data, ketika ada data baru
+
+Metode Supervised:
+ 1. Desicion tree
+    mesin membuat nested if dari data berlabel, estimasi label dari data baru
+ 2. Regresi Linear
+    mesin membuat fungsi linear dari data berlabel, estimasi label dari data baru
+ 3. Logistic regression
+    membuat logistic model (grafik y: probabilitas 0% - 100% data termasuk label atau tidak, x:data)
+    sehingga ketika ada data baru kita tahu persentase data tersebut bisa masuk label atau tidak masuk label
+
+Metode Unsuperviesed:
+ 1. Clustering
+    mesin belajar banyak data, mesin mengelompokan data, ketika ada data baru mesin menentukan kelompok si data tsb
+    Metode Clustering:
+    a. K-means
+       Algoritma:
+        1. meletakan centroid secara acak sebanyak K
+        2. mengelompokan data ke centroid terdekat
+        3. centroid bergerak ke "titik berat" data kelompok tersebut
+        4. mengelompokan lagi data ke centroid terdekat
+        5. centroid bergerak ke "titik berat" data kelompok
+        6. jika proses ke 5 centroid tdk bergerak iterasi selesai
+       Jika data banyak, sulit menentukan K, bisa gunakan metode Elbow utk cari K
+       Algoritma metode Elbow:
+        1. Menjalankan K-means dengan K = 1,2,3,...
+        2. Menjumlahkan jarak antar data di dalam satu klaster (inertia)
+        3. Jumlahkan nilai di no.2 antar klaster
+        4. buat grafik (K,inertia)
+        5. lihat elbow pada grafik (seperti siku tangan, penurunan inertia tidak lagi signifikan)
+ 2. Dimensionality Reduction
+    arti: mengurangi data yang tidak perlu, contoh: crop background image, hapus kelompok data yang tdk relevan
+    Metode:
+    a. Principal Component Analysis (PCA)
+       membuat grafik variance dari tiap atribut, variance = persentase satu jenis/kategori data dibanding seluruh data
+       membuang jenis data yang variance nya kecil karena tidak terlalu mempengaruhi
+    b. Linear Discriminant Analysis (LDA)
+       untuk data berlabel di plot
+       buat garis dan proyeksikan data ke garis
+       cari garis yang menghasilkan separasi data terbaik
+    c. 
+         
+  

@@ -1,0 +1,305 @@
+div {
+  background-color: red;       /* solid color background */
+  background-image: url(a.jpg);  /* image background */
+  background-position: top;      /* play it: https://www.w3schools.com/cssref/playit.asp?filename=playcss_background-position&preval=10px%20200px */
+  background-repeat: repeat;     /* repeat-x, repeat-y, no-repeat; */
+  background-size: contain;      /* gk kepotong, ada space kosong; cover => kepotong, gk ada space kosong */
+  background-size: 100px;        /* y: 100px, x: auto (sesuai scale) ; bg: auto = sesuai size gambar */
+  background-origin: border-box; /* diitung dari border terluar, padding content-box sama juga */
+  background-clip: text;         /* dicrop dan ditampilkan ditext saja, border content padding-box sama juga */
+  background-attachment: fixed;  /* gak ikut scroll with page; scroll => ikut scroll; local => fixed di element; */
+
+  /* GRADIENT */
+  background-image: linear-gradient(to bottom right, red, yellow, green, blue ); /* gradient pelangi; bisa juga pake deg dan % warna*/
+  background-image: radial-gradient(circle, red, yellow, green) /* gradient warna lingkaran dari tengah, without circle => ellipse */
+}
+
+/* BORDER & OUTLINE (nambah total size, gak rubah size content) fixnya pake { box-sizing: border-box } */
+div {
+  /*     width style color */
+  border: 50px solid red; 
+  outline: 5px solid red;
+
+  border-radius: 5px;            /* rounded corner, 50% => jadi circle or oval */
+  border-image: url(border.png); /* https://www.w3schools.com/css/css3_border_images.asp */
+
+  box-sizing: content-box; /* total size box != height x weight, tapi + padding dan border */
+  box-sizing: border-box;  /* total size box == height x weight */
+}
+
+
+/* MARGIN & PADDING (nambah total size, gak rubah size content) */ 
+div{
+  margin: 25px;                   /* all side */
+  margin: 25px 100px;             /* -y- -x- */
+  margin: 25px 100px 400px;       /* top -x- bot */
+  margin: 25px 100px 400px 800px; /* top right bot left */
+  margin: auto;                   /* membagi rata kanan kiri dari sisa space, atas bawah = 0, padding gada auto */
+}
+
+
+/* CONTENT SIZING */
+div {
+  width: 100vw;  /* 100% width browser (default width: auto (match-parent))) */
+  height: 100vh; /* 100% height browser (default height:  )*/
+
+  width: 50%;   /* 50% persent dari container */
+  width: auto;  /* kanan kiri fit to container, atas bawah nol */
+  width: 10px;  /* 10 pixel; 10rem => 10 * fontsize of body; 10em => 10 * fontsize of the div */
+
+  min-width: 10px;   /* width terkecil */
+  max-width: 1000px; /* width terbesar */
+}
+
+
+/* POSITION */
+div {
+  position: static;             /* normal, top, left, bottom, right, z-index tdk berpengaruh */
+  position: relative; top: 5px; /* dari normal kebawah 5px */
+  position: absolute; top: 5px; /* dari top page kebawah 5px (gk nempel) (gak booking space kyk relative) */
+  position: fixed;    top: 5px; /* nempel di 5px dari atas browser (di scroll posisinya tetap) */
+  position: sticky;   top: 5px; /* normal, kalo udh 5px dari browser maka nempel atau fixed */
+}
+
+
+/* OVERFLOW (kalo content melebihi container) */ 
+div {
+  overflow: visible; /* konten keluar container (default) */
+  overflow: hidden;  /* konten yg keluar tdk terlihat */
+  overflow: scroll;  /* ada scroll walaupun gak keluar */
+  overflow: auto;    /* ada scroll kalau keluar */
+  overflow-x: hidden; overflow-y: scroll; /* bisa setting buat x atau y saja */
+}
+
+/* FLOAT */
+div {
+  float: left; /* box jatuh ke kiri kalau colapse pindah kebawah */
+  clear: both; /* suruh pindah kebawah */
+} /* clearfix: https://www.w3schools.com/howto/howto_css_clearfix.asp */
+
+
+/* TEXT & FONT*/
+p {
+  font: italic small-caps  bold      12px/30px      Georgia, serif;
+  /*    style   variant   weight  size/line-height      family   */
+
+  font-family: Courier, monospace; /* jenis font */
+  
+  text-align: justify;    /* rata kiri kanan, ada juga: left, right, center */
+  vertical-align: middle; /* vertikal alignment text (didalam line height atau cell tabel bukan container) */
+
+  color: red;               /* text color */
+  text-transform: capitalize; /* text capitalization  , ada juga: capitalize, lowercase, uppercase */
+  text-decoration: underline; /* text decoration ada juga: underline, overline, line-through, none */
+  font-size: 2.5rem;          /* text size, bisa juga: xx-small, x-small, small, medium, large, x-large, xx-large */
+  font-style: italic;         /* text style, ada juga: normal, italic, oblique */
+  font-weight: bold;          /* text weight, ada juga: lighter, normal, bold, bolder, 100, 200, ... , 800, 900 */
+  font-variant: small-caps;   /* all uppercase with big first letter */
+
+  text-indent: 1rem;     /* width of indentation */
+  letter-spacing: 2px;   /* width of each letter */
+  word-spacing: 2px;     /* width of each word */
+  line-height: 2em;      /* height of each line */
+
+  white-space: nowrap;   /* never move to new line, scroll ke kanan*/
+  word-wrap: break-word; /* long word dipotong kebawah jika tdk cukup, */
+  word-break: break-all; /* break-all: word dipotong dimana saja; keep-all: word gak dipotong  */
+
+  writing-mode: vertical-lr; /* tulisan vertical https://www.w3schools.com/css/tryit.asp?filename=trycss3_writing-mode */
+
+  /* using own font => https://www.w3schools.com/css/css3_fonts.asp */
+}
+
+
+/* LIST ITEM MARKER */
+li {
+  list-style-type: disc; /* Contoh Lain : */
+  /* disc (tompel) ;      circle        ;      square        ;       '*'         ; '\1F44D' (jempol) */
+  /* decimal (1,2) ; upper-roman (I,II) ; lower-roman (i,ii) ; upper-alpha (A,B) ;                   */
+
+  list-style-image: url('img.jpg'); /* image */
+  list-style-position: outside;     /* diluar div */
+}
+
+
+/* TABLE */
+/* https://www.w3schools.com/css/css_table.asp */
+
+/* Remove Bullet from list  */
+li {
+  list-style-type: none;
+}
+
+
+/* DISPLAY */
+div {
+  display: block;        /* selalu ambil newline, height bebas,        EX: div, h1-h6, p, form, header, footer, section */
+  display: inline;       /* gk ambil newline, height sesuai text lain, EX: span, a, img (but behave like inline-block) */
+  display: inline-block; /* gk ambil newline, height bebas */
+
+  display: none;         /* komponen tidak ada, layout berubah */
+  visibility: hidden;    /* komponen tidak terlihat, layout tdk berubah */
+}
+
+
+/* PSEUDO ELEMENT */
+p::first-line    {color:red} /* baris pertama red */
+p::first-letter  {color:red} /* huruf pertama red */
+p::selection     {color:red} /* ketika text diblok warnanya merah */
+h1::before       {content:"*"} /* sebelum text tambah "*" */
+h1::after        {content:"*"} /* sesudah text tambah "*" */
+
+/* PSEUDO CLASS */
+a:link           {color:red} /* unvisited */
+a:visited        {color:red} /* visited */
+a:hover          {color:red} /* cursor di atas link */
+a:active         {color:red} /* cursor menekan link */
+input:focus      {color:red} /* contoh: lagi ngetik di form */
+
+p:first-child    {color:red} /* anak pertama*/
+p:nth-child(5)   {color:red} /* anak ke-lima */
+p:first-of-type  {color:red} /* p pertama dari serangakaian p */
+p:nth-of-type(5) {color:red} /* p ke 5 dari serangakain p */
+p:only-of-type   {color:red} /* select p, anak tunggal */ 
+
+:not(p)          {color:red} /* select yang bukan p */ 
+
+
+/* ATTRIBUT SELECTOR */
+img[alt]           {height: 1px} /* select ke img yang punya attribut alt */
+img[alt="gambar"]  {height: 1px} /* hanya mengandung gambar                ex: gambar                               */
+img[alt~="gambar"] {height: 1px} /* mengandung word "gambar"               ex: gambar putih, bagus gambar, gambat   */
+img[alt*="ga"]     {height: 1px} /* mengandung "ga" dimana aja,            ex: gambar, galon, bangga, bagasi, ga    */
+img[alt|="gambar"] {height: 1px} /* awalnya mengandung "gambar" split "-", ex: gambar-manusia, gambar-tikus, gambar */
+img[alt~="gambar"] {height: 1px} /* awalnya mengandung "gambar"            ex: gambaran, gambar-tikus, gambar       */
+img[alt$="gambar"] {height: 1px} /* diakhiri "gambar"                      ex: a-gambar, b_gambar, mygambar, gambar */
+
+
+/* CSS UNIT */
+
+/* ~~ Absolute ~~ */
+/* cm : centimeter */
+/* mm : milimeter */
+/* in : inchi */
+/* px : pixel */
+
+/* ~~ Relative ~~ */
+/* em  : kali font size of parent element */
+/* rem : kali font size of body element   */
+/* vw  : kali 1% width of viewport        */
+/* vh  : kali 1% height of viewport       */
+/* %   : kali size of parent element      */
+
+
+/* BOX SHADOW & TEXT SHADOW */
+div {
+  box-shadow: 1px 2px 3px 4px red;            /* -x- -y- blur size color */
+  text-shadow: 1px 2px red, -1px -2px blue; /* kayak tiktok, bayangannya dua */
+}
+
+
+/* ~~~~~~ ANIMATION ~~~~~~ */
+/* TRANSFORM */
+div {
+  transform: translate(50px, 100px); /* translasi 50px kanan 100px bawah */
+  transform: rotate(20deg);          /* rotasi 20 derajat */
+  transform: scale(2);               /* perbesar 2 kali */
+  transform: skew(20deg);            /* miring 20 derajat */
+  transform: matrix(1,2,0,1,0,0);    /* scaleX skewY skewX scaleY translateX translateY */ 
+}
+/* TRANSITION (kalo elemen berubah valuenya) */
+div {
+  transition-timing-function: cubic-bezier(1,1,1,1); /* ease, liniear; (specifies speed curve); https://cubic-bezier.com/#.84,1.21,1,1  */
+  transition: 2s;       /* waktu transisi */
+  transition-delay: 1s; /* delay sebelum bergerak */
+}
+/* ANIMATION: https://www.w3schools.com/css/css3_animations.asp */
+
+
+/* CSS VARIABLE */
+:root { /* deklarasi variabel di root element supaya berlaku ke semuanya */
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+div {   /* pemakaian variabel */
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+
+/* FLEXBOX */
+div {                            /* main axis sb-x defaultnya, cross axis sb-y*/
+  display: flex;                 /* untuk daftar flexbox */
+
+  flex-direction: row;           /* main axis di x ; column: main axisnya di y ; -reverse buat urutan terbalik */
+  flex-wrap: wrap;               /* kalo ga cukup kebawah */
+  flex-flow: row wrap;           /* shorthand dir dan wrap */
+  flex-basis: 25%;               /* size itemnya 25% dari container */
+
+  justify-content: space-evenly; /* horizontal alignment (space antar div sama) */
+  align-items: center;           /* vertikal alignment (div di tengah container) */
+
+  /* Custom size flex item:       https://www.w3schools.com/css/css3_flexbox_items.asp */
+}
+
+
+/* RESPONSIVE DESIGN */
+div { color:red }                                           /* X-Small devices  (portrait phones  < 576px) */
+@media screen and (min-width: 576px)  { div { color:red } } /* Small devices    (landscape phones 576px  and up) */
+@media screen and (min-width: 768px)  { div { color:red } } /* Medium devices   (tablets,         768px  and up) */
+@media screen and (min-width: 992px)  { div { color:red } } /* Large devices    (desktops,        992px  and up) */
+@media screen and (min-width: 1200px) { div { color:red } } /* X-Large devices  (large desktops   1200px and up) */
+@media screen and (min-width: 1400px) { div { color:red } } /* XX-Large devices (larger desktops  1400px and up) */
+
+
+/* CSS GRID */
+/* https://www.w3schools.com/css/css_grid.asp */
+
+/* Centering Content */
+div {
+  /* Centering Line of Text */
+  text-align: center;
+
+  /* CENTERING A BLOCK*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+
+  /* Centering Image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Centering Vertically */
+  display: flex;
+  align-items: center
+}
+
+/* Object Fit (img or video resized to fit its container) */
+img {
+  object-fit: fill;       /* default, paksa fit, nanti bakal strecthed or squished */
+  object-fit: contain;    /* resize sampe masuk semua, tapi aspect ratio tetap, jadi ada bagian kosong */
+  object-fit: cover;      /* resize sampe ke fill semua, aspect ration tetap, posisi tengah */
+}
+
+/* Cursor (kalo hover cursor akan berubah */
+div {
+  cursor: pointer;         /* tangan mau mencet, untuk tombol */
+  cursor: auto;            /* default, sesuai dengan konten */
+  cursor: url(cursor.png); /* cursor gambar */
+}
+
+/* bagian putih/kosong disekeliling browser */
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+
+
+
+
